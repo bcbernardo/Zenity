@@ -54,11 +54,11 @@ setup(
     platforms='any',
     provides=[name],
     install_requires=[],
-    py_modules=['pyzenity'],
-    scripts=['pyzenity.py'],
+    py_modules=['zenity'],
+    scripts=['zenity.py'],
     entry_points='''
         [console_scripts]
-        pyzenity=pyzenity:cli
+        zenity=zenity:cli
     ''',
     zip_safe=True,
     classifiers=[
