@@ -55,7 +55,7 @@ def test_call(*args, **kwargs):
     """ Test whether a subprocess call succeeds.
     """
     try:
-        subprocess.check_output(*args, **kwargs)
+        subprocess.check_output(*args, **kwargs, timeout=10)
         return True
     except Exception:
         return False
@@ -93,7 +93,7 @@ def works():
         system("sudo apt-get install zenity")
     except Exception as e:
         raise ZenityException("Zenity Not Working\nlog:\n"+e)
-    return test_call(['zenity', 'def version'])
+    return test_call(['zenity', '--version'])
 
 def show(*args,**kwargs):
     """show dialog"""

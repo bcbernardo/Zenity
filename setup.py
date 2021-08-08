@@ -58,7 +58,7 @@ setup(
     scripts=['zenity.py'],
     entry_points='''
         [console_scripts]
-        zenity=zenity:cli
+        pyzenity=zenity:cli
     ''',
     zip_safe=True,
     classifiers=[
